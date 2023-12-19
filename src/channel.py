@@ -19,6 +19,31 @@ class Channel:
         self.video_count = self.channel['items'][0]['statistics']['videoCount']    # - количество видео
         self.viewCount = self.channel['items'][0]['statistics']['viewCount']    # - общее количество просмотров
 
+    def __str__(self):
+        """название и ссылку на канал по шаблону < название_канала > (< ссылка_на_канал >)"""
+        return f'{self.title} ({self.url})'
+
+    def __add__(self, other):
+        return int(self.subscriberCount) + int(other.subscriberCount)
+
+    def __sub__(self, other):
+        return int(self.subscriberCount) - int(other.subscriberCount)
+
+    def __eg__(self, other):
+        return self.subscriberCount == other.subscriberCount
+
+    def __lt__(self, other):
+        return int(self.subscriberCount) < int(other.subscriberCount)
+
+    def __gt__(self, other):
+        return int(self.subscriberCount) > int(other.subscriberCount)
+
+    def __le__(self, other):
+        return int(self.subscriberCount) <= int(other.subscriberCount)
+
+    def __ge__(self, other):
+        return int(self.subscriberCount) >= int(other.subscriberCount)
+
     def print_info(self) -> None:
         """Выводит в консоль информацию о канале."""
         print(json.dumps(self.channel, indent=2, ensure_ascii=False))
@@ -29,9 +54,9 @@ class Channel:
 
 
     def to_json(self, file_name):
-        channel_info = {'id' : self.id, 'title': self.title, 'description': self.description,
+        channel_info = {'id': self.id, 'title': self.title, 'description': self.description,
                         'url': self.url, 'subscriberCount': self.subscriberCount, 'video_count': self.video_count,
                         'viewCount': self.viewCount}
 
-        with open(file_name, 'w', encoding='utf-8') as file:
+        with open(file_name, 'w',) as file:
             json.dump(channel_info, file, indent=4)
