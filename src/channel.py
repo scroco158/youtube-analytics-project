@@ -20,7 +20,7 @@ class Channel:
         self.viewCount = self.channel['items'][0]['statistics']['viewCount']    # - общее количество просмотров
 
     def __str__(self):
-        """название и ссылку на канал по шаблону < название_канала > (< ссылка_на_канал >)"""
+        """Название и ссылку на канал по шаблону < название_канала > (< ссылка_на_канал >)"""
         return f'{self.title} ({self.url})'
 
     def __add__(self, other):
@@ -51,7 +51,6 @@ class Channel:
     @classmethod
     def get_service(cls):
         return cls.youtube
-
 
     def to_json(self, file_name):
         channel_info = {'id': self.id, 'title': self.title, 'description': self.description,
