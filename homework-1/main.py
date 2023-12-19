@@ -2,7 +2,16 @@ from src.channel import Channel
 
 if __name__ == '__main__':
     moscowpython = Channel('UC-OVMPlMA3-YCIeg4z5z23A')
-    moscowpython.print_info()
+    #moscowpython.print_info()
+    print(dir(moscowpython))
+    print(moscowpython.channel['items'])
+    print(moscowpython.id)
+    print(moscowpython.name)
+    print(moscowpython.description)
+    print(moscowpython.url)
+    print(moscowpython.subscriberCount)
+    print(moscowpython.videoCount)
+    print(moscowpython.viewCount)
 
     """
 {
