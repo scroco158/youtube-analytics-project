@@ -1,10 +1,10 @@
 {
     "kind": "youtube#videoListResponse",
-    "etag": "zVVbeeHfX3cYJzlEPj3wIrylTJ0",
+    "etag": "3NBgjOomcqTsCxMz0LNOHgmzUAA",
     "items": [
         {
             "kind": "youtube#video",
-            "etag": "EYGcjMADdn20flFmeW60x5DnQ24",
+            "etag": "1BQRuYKwGXnHXWPhB_a3GNHq52E",
             "id": "AWX4JnAnjBE",
             "snippet": {
                 "publishedAt": "2013-11-13T07:02:16Z",
@@ -51,14 +51,11 @@
                     "description": "Григорий Петров\n12 сентября 2013\nMoscow Django Meetup № 14\n\nВ своем докладе Григорий проведет краткий экскурс в историю потоков и расскажет, зачем был создан GIL. Будут рассмотрены практические вопросы многопоточности в Python и способы работы с GIL.\nСлайды выступления: http://www.moscowpython.ru/meetup/14/gil-and-python-why/"
                 }
             },
-            "contentDetails": {
-                "duration": "PT56M24S",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "false",
-                "licensedContent": false,
-                "contentRating": {},
-                "projection": "rectangular"
+            "statistics": {
+                "viewCount": "56624",
+                "likeCount": "2387",
+                "favoriteCount": "0",
+                "commentCount": "56"
             }
         }
     ],
